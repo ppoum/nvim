@@ -1,3 +1,3 @@
 # 💤 LazyVim
 
-Edit version of starter template
+Edited version of starter template

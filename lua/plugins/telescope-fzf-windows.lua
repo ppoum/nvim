@@ -5,4 +5,5 @@ if vim.fn.has("win32") == 1 then
       build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
     },
   }
+  else return {}
 end

@@ -1,12 +1,20 @@
 return {
-  -- Create a new highlight group for inlay hints
+  -- Use catppuccin
   {
-    "folke/tokyonight.nvim",
-    lazy = true,
+    "LazyVim/LazyVim",
     opts = {
-      on_highlights = function(hl, c)
-        hl.InlayHint = {
-          fg = "#1c5166",
+      colorscheme = "catppuccin-macchiato",
+    },
+  },
+  -- Configure catppuccin (create new InlayHint highlight group)
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
+    opts = {
+      custom_highlights = function(_)
+        return {
+          InlayHint = { fg = "#1c5166" },
         }
       end,
     },

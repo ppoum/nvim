@@ -3,8 +3,8 @@ return {
   "mrcjkb/rustaceanvim",
   opts = {
     server = {
-      on_attach = function(_, bufnr)
-        vim.lsp.inlay_hint.enable(bufnr)
+      on_attach = function(_, _)
+        vim.lsp.inlay_hint.enable(true)
       end,
     },
   },

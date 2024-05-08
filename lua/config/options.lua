@@ -7,6 +7,12 @@ vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a T
 vim.o.softtabstop = 4 -- Number of spaces inserted instead of a TAB character
 vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
 
+-- Until Windows Terminal has OSC52 support, just yank to the system clipboard
+vim.o.clipboard = "unnamedplus"
+
+-- Search within visual selection
+vim.keymap.set("v", "<m-/>", "<esc>/\\%V")
+
 -- Windows-only settings
 if vim.fn.has("win32") == 1 then
   -- Use powershell instead of cmd

@@ -14,7 +14,8 @@ return {
     opts = {
       custom_highlights = function()
         return {
-          CustomColorCol = { fg = "#1E2030" },
+          -- Color is the same as the darker background
+          CustomColorCol = { fg = "#1E2031" },
         }
       end,
     },
